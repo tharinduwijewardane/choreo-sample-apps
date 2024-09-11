@@ -32,3 +32,17 @@ endpoints:
   # +optional Context (base path) of the API that is exposed via this endpoint.
   # This is mandatory if the endpoint type is set to REST or GraphQL.
   context: /
+  # +required Unique name for the endpoint. (This name will be used when generating the managed API)
+- name: GraphQL Reading List Org level
+  # +required Numeric port value that gets exposed via this endpoint
+  port: 8091
+  # +required Type of the traffic this endpoint is accepting. Example: REST, GraphQL, etc.
+  # Allowed values: REST, GraphQL, GRPC
+  type: GraphQL
+  # +optional Network level visibility of this endpoint. Defaults to Project
+  # Accepted values: Project|Organization|Public.
+  networkVisibility: Organization
+  # +optional Context (base path) of the API that is exposed via this endpoint.
+  # This is mandatory if the endpoint type is set to REST or GraphQL.
+  context: /
+  
